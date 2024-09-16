@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>코틀린 공부하기</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #f0f0f0;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      margin: 0;
+      background: linear-gradient(45deg, #f57c00, #1976d2);
+    }
+    .container {
+      text-align: center;
+      background-color: white;
+      padding: 20px;
+      border-radius: 10px;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    }
+    h1 {
+      color: #f57c00; /* 코틀린 주황색 */
+      font-size: 36px;
+      margin-bottom: 30px;
+    }
+    .container button {
+      width: 200px;
+      padding: 10px;
+      margin: 10px;
+      font-size: 16px;
+      color: white;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+    .login-btn {
+      background-color: #1976d2; /* 코틀린 파란색 */
+    }
+    .signup-btn {
+      background-color: #f57c00; /* 코틀린 주황색 */
+    }
+    .container button:hover {
+      opacity: 0.9;
+    }
+  </style>
+</head>
+<body>
+
+<div class="container">
+  <h1>코틀린 공부하기</h1>
+  <button class="login-btn" onclick="window.location.href='/login'">로그인</button><br>
+  <button class="signup-btn" onclick="window.location.href='/signup'">회원가입</button>
+</div>
+
+</body>
+</html>

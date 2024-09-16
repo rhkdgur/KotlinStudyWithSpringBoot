@@ -1,0 +1,26 @@
+spring:
+  profiles:
+    active: local
+
+
+---
+spring:
+  config:
+    activate:
+      on-profile: local
+
+  datasource:
+    url: jdbc:mysql://152.69.227.191:33306/kotlintest?serverTimezone=UTC&characterEncoding=UTF-8
+    username: test
+    password: test!23
+    driver-class-name: com.mysql.cj.jdbc.Driver
+
+  jpa:
+    open-in-view: false
+    hibernate:
+      ddl-auto: update
+
+logging:
+  level:
+    org.hibernate.SQL: debug
+    org.hibernate.type: debug
