@@ -9,6 +9,10 @@ spring:
     activate:
       on-profile: local
 
+  mustache:
+    charset: UTF-8
+    enabled: true
+
   datasource:
     url: jdbc:mysql://152.69.227.191:33306/kotlintest?serverTimezone=UTC&characterEncoding=UTF-8
     username: test

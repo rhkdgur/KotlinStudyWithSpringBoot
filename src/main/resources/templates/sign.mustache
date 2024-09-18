@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>회원가입</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f0f0f0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+        }
+        .signup-container {
+            background-color: white;
+            padding: 30px; /* 패딩을 30px로 증가 */
+            border-radius: 12px; /* 모서리 둥글기 증가 */
+            box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+            width: 350px; /* 컨테이너의 너비를 더 넓게 조정 */
+        }
+        h2 {
+            margin-bottom: 25px;
+            color: #333;
+            text-align: center;
+            font-size: 24px; /* 제목의 글자 크기를 키움 */
+        }
+        .signup-container label {
+            display: block;
+            margin-bottom: 8px;
+            color: #555;
+            font-size: 16px; /* 라벨 글자 크기 증가 */
+        }
+        .signup-container input[type="text"],
+        .signup-container input[type="password"] {
+            width: 100%;
+            padding: 12px; /* 입력 필드의 패딩 증가 */
+            margin-bottom: 20px;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            font-size: 16px; /* 입력 필드 글자 크기 증가 */
+            box-sizing: border-box;
+        }
+        .button-group {
+            display: flex;
+            justify-content: space-between;
+        }
+        .signup-container button {
+            width: 48%;
+            padding: 12px; /* 버튼 크기를 키움 */
+            background-color: #28a745;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            font-size: 16px; /* 버튼 글자 크기 증가 */
+            cursor: pointer;
+        }
+        .signup-container .back-button {
+            background-color: #6c757d;
+        }
+        .signup-container button:hover {
+            background-color: #218838;
+        }
+        .signup-container .back-button:hover {
+            background-color: #5a6268;
+        }
+    </style>
+</head>
+<body>
+
+<div class="signup-container">
+    <h2>Sign up</h2>
+    <form action="/signup" method="post">
+        <label for="name">NAME</label>
+        <input type="text" id="name" name="name" placeholder="name input" required>
+
+        <label for="username">ID</label>
+        <input type="text" id="username" name="username" placeholder="id input" required>
+
+        <label for="password">PASSWORD</label>
+        <input type="password" id="password" name="password" placeholder="pwd input" required>
+
+        <div class="button-group">
+            <button type="submit">Submit</button>
+            <button type="button" class="back-button" onclick="history.back()">back</button>
+        </div>
+    </form>
+</div>
+
+</body>
+</html>

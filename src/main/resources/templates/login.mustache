@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>로그인</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f0f0f0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+        }
+        .login-container {
+            background-color: white;
+            padding: 30px;
+            border-radius: 12px;
+            box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+            width: 350px; /* 컨테이너 너비를 넓게 설정 */
+        }
+        h2 {
+            margin-bottom: 25px;
+            color: #333;
+            font-size: 24px; /* 제목 크기를 키움 */
+            text-align: center;
+        }
+        .login-container label {
+            display: block;
+            margin-bottom: 8px;
+            color: #555;
+            font-size: 16px;
+        }
+        .login-container input[type="text"],
+        .login-container input[type="password"] {
+            width: 100%;
+            padding: 12px; /* 입력 필드 padding을 늘림 */
+            margin-bottom: 20px;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            font-size: 16px; /* 글자 크기 키움 */
+            box-sizing: border-box;
+        }
+        .button-group {
+            display: flex;
+            justify-content: space-between;
+        }
+        .login-container button {
+            width: 48%;
+            padding: 12px; /* 버튼 크기 증가 */
+            background-color: #007BFF;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            font-size: 16px; /* 버튼 글자 크기 증가 */
+            cursor: pointer;
+        }
+        .login-container .back-button {
+            background-color: #6c757d;
+        }
+        .login-container button:hover {
+            background-color: #0056b3;
+        }
+        .login-container .back-button:hover {
+            background-color: #5a6268;
+        }
+    </style>
+</head>
+<body>
+
+<div class="login-container">
+    <h2>Login</h2>
+    <form action="/login" method="post">
+        <label for="username">ID</label>
+        <input type="text" id="username" name="username" placeholder="ID input" required>
+
+        <label for="password">Password</label>
+        <input type="password" id="password" name="password" placeholder="Pwd input" required>
+
+        <div class="button-group">
+            <button type="submit">Submit</button>
+            <button type="button" class="back-button" onclick="history.back()">back</button>
+        </div>
+    </form>
+</div>
+
+</body>
+</html>

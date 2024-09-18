@@ -3,6 +3,7 @@ package com.kotlin.udemy.auth
 import org.springframework.stereotype.Controller
 import org.springframework.ui.Model
 import org.springframework.web.bind.annotation.GetMapping
+import org.springframework.web.bind.annotation.PathVariable
 
 /**
  *packageName    : com.kotlin.udemy.auth
@@ -17,14 +18,8 @@ import org.springframework.web.bind.annotation.GetMapping
  */
 @Controller
 class LoginController {
-
-    @GetMapping("sign")
-    fun sign(model : Model) : String {
-        return "sign";
-    }
-
-    @GetMapping("login")
-    fun login(model : Model) : String {
-        return "login";
+    @GetMapping("/{moveUrl}")
+    fun moveUrl(model : Model, @PathVariable("moveUrl") url : String) : String {
+        return url;
     }
 }
